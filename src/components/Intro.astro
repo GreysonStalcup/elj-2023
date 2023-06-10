@@ -2,8 +2,15 @@
 import Bubbles from "../components/Bubbles";
 ---
 
-<section class="intro bg-[#2A4C59] h-screen overflow-hidden relative">
-  <div class="my-au mx-auto text-center text-white relative z-10">
+<section
+  class="flex items-center justify-evenly intro bg-[#2A4C59] h-screen overflow-hidden relative"
+>
+  <div class="fixed left-0 right-0 bottom-0 top-0">
+    <Bubbles client:load />
+  </div>
+  <div
+    class="flex justify-evenly h-full flex-col my-au mx-auto text-center text-white relative z-10"
+  >
     <h1 class="text-4xl md:text-9xl">You're Invited</h1>
     <div class="tagline">
       <h2 class="text-xl md:text-3xl uppercase">
@@ -14,5 +21,4 @@ import Bubbles from "../components/Bubbles";
       </p>
     </div>
   </div>
-  <Bubbles client:load />
 </section>
