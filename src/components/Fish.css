@@ -1,0 +1,12 @@
+.fish {
+  position: absolute;
+  background-image: url("/fish.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flipped {
+  background-size: contain;
+  transform: scaleX(-1);
+}

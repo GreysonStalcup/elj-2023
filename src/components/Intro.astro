@@ -1,12 +1,16 @@
 ---
 import Bubbles from "../components/Bubbles";
+import Fish from "../components/Fish";
 ---
 
 <section
-  class="flex items-center justify-evenly intro bg-[#2A4C59] h-screen overflow-hidden relative"
+  class="flex items-center justify-evenly intro bg-[#2A4C59] h-screen w-screen overflow-hidden relative"
 >
-  <div class="fixed left-0 right-0 bottom-0 top-0">
+  <div class="fixed inset-0">
     <Bubbles client:load />
+  </div>
+  <div class="fixed inset-0">
+    <Fish client:load />
   </div>
   <div
     class="flex justify-evenly h-full flex-col my-au mx-auto text-center text-white relative z-10"
@@ -21,4 +25,8 @@ import Bubbles from "../components/Bubbles";
       </p>
     </div>
   </div>
+</section>
+<section
+  class="flex items-center justify-evenly intro bg-[#2A4C59] h-screen w-screen overflow-hidden relative"
+>
 </section>
