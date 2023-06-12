@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+interface Bubble {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  duration: number;
+}
+
 const BubbleAnimation = () => {
-  const [bubbles, setBubbles] = useState([]);
+  const [bubbles, setBubbles] = useState<Bubble[]>([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setBubbles((prevBubbles) => [...prevBubbles, generateBubble()]);
-    }, 1000);
+    }, 500);
 
     return () => clearInterval(interval);
   }, []);
@@ -22,7 +30,7 @@ const BubbleAnimation = () => {
     };
   };
 
-  const handleAnimationComplete = (id) => {
+  const handleAnimationComplete = (id:number) => {
     setBubbles((prevBubbles) =>
       prevBubbles.filter((bubble) => bubble.id !== id)
     );
@@ -55,7 +63,7 @@ const BubbleAnimation = () => {
             width: bubble.size,
             height: bubble.size,
             background: "transparent",
-            boxShadow: "inset 0 0 10px rgba(255, 255, 255, 0.5)",
+            boxShadow: "inset 0 0 10px rgba(255, 255, 255, 1)",
             borderRadius: "50%",
           }}
         />
