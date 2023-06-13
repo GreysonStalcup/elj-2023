@@ -10,6 +10,7 @@ interface FishData {
   duration: number;
   size: number;
   hue: number;
+  imageName: string;
 }
 
 const Fish: React.FC = () => {
@@ -20,12 +21,14 @@ const Fish: React.FC = () => {
     const screenHeight = window.innerHeight;
     const fishCount = Math.floor(Math.random() * 5) + 1;
     const newFishes: FishData[] = [];
-
+  
     for (let i = 0; i < fishCount; i++) {
       const fishY = Math.random() * screenHeight;
       const fishDirection = Math.random() < 0.5 ? -1 : 1;
       const fishHue = Math.floor(Math.random() * 360);
-
+      const fishIndex = Math.floor(Math.random() * 3) + 1;
+      const fishImageName = `fish${fishIndex}_${fishDirection === 1 ? 'l' : 'r'}.png`;
+  
       newFishes.push({
         id: Date.now() + i,
         x: fishDirection === -1 ? screenWidth : -200,
@@ -34,11 +37,13 @@ const Fish: React.FC = () => {
         duration: Math.random() * 5 + 5,
         size: Math.random() * 30 + 20,
         hue: fishHue,
+        imageName: fishImageName,
       });
     }
-
+  
     setFishList((prevFishList) => [...prevFishList, ...newFishes]);
   };
+  
 
   useEffect(() => {
     const interval = setInterval(generateFishData, 3000);
@@ -75,18 +80,16 @@ const Fish: React.FC = () => {
           style={{
             width: fish.size,
             height: fish.size,
-            backgroundImage: `url(${
-              fish.direction === 1 ? "/fish_l.png" : "/fish_r.png"
-            })`,
+            backgroundImage: `url(${fish.imageName})`,
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            filter: `hue-rotate(${fish.hue}deg)`,
+            filter: `hue-rotate(${fish.hue}deg) blur(${fish.size / 70}px)`,
+
           }}
         />
       ))}
     </>
   );
-};
-
+        };
 export default Fish;

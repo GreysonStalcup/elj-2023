@@ -3,6 +3,7 @@ import Bubbles from "../components/Bubbles";
 import Fish from "../components/Fish";
 import IntroText from "./IntroText";
 import When from "../components/When";
+import Shark from "./Shark";
 ---
 
 <section
@@ -14,7 +15,10 @@ import When from "../components/When";
   <div class="fixed inset-0">
     <Fish client:load />
   </div>
-  <!-- <IntroText client:load /> -->
+  <div class="fixed inset-0">
+    <Shark client:load />
+  </div>
+  <IntroText client:load />
 </section>
 <section
   class="justify-evenly intro bg-gradient-to-b from-[#093C75] to-[#ffffff] h-screen overflow-hidden relative"
