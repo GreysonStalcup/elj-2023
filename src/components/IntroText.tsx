@@ -7,13 +7,17 @@ export default function IntroText() {
   return (
     <motion.div
       initial={{ y: "-100%", opacity: 0 }}
-      whileInView={{ y: "0", opacity: 1 }}
+      animate={{ y: "0", opacity: 1 }}
       transition={{ duration: 2 }}
       className="flex justify-evenly h-full flex-col my-au mx-auto text-center text-white relative z-10"
     >
       <div className="text-center items-center">
         <img src={invited} className="mx-auto" alt="invite text" />
-        <img src={logo} className="mx-auto w-1/2 md:w-1/4" alt="invite text" />
+        <img
+          src={logo}
+          className="mx-auto w-1/2 md:w-1/4 lg:w-1/5 xl:w-1/6"
+          alt="invite text"
+        />
       </div>
       <h1 className="p-10 md:p-0 text-4xl md:text-6xl font-bold">
         26th Annual An Evening in La Jolla

@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import info from "/when/info.png";
 import button from "/when/button.png";
