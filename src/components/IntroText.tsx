@@ -4,7 +4,7 @@ import invited from '/intro/invited.png';
 import logo from '/intro/sdcbf_logo.png';
 export default function IntroText() {
   return (
-    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
+    <motion.div initial={{ y: "-100%", opacity: 0 }} whileInView={{ y: "0", opacity: 1 }} transition={{ duration: 2 }}
       className="flex justify-evenly h-full flex-col my-au mx-auto text-center text-white relative z-10"
     >
       <div className='text-center items-center'>
