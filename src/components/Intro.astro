@@ -4,6 +4,7 @@ import Fish from "../components/Fish";
 import IntroText from "./IntroText";
 import When from "../components/When";
 import Shark from "./Shark";
+import { Officers, Directors } from "../components/Board";
 ---
 
 <section
@@ -15,13 +16,17 @@ import Shark from "./Shark";
   <div class="absolute inset-0">
     <Fish client:load />
   </div>
-  <div class="absolute inset-0">
-    <Shark client:load />
-  </div>
   <IntroText client:load />
 </section>
 <section
-  class="justify-evenly intro bg-gradient-to-b from-[#093C75] to-[#ffffff] overflow-hidden relative"
->
-<When client:load />
+  class="justify-evenly intro bg-gradient-to-b from-[#093C75] to-[#ffffff] overflow-hidden relative">
+<When client:visible />
+<h2 class="text-4xl text-center font-tangerine font-bold">Officers</h2>
+<hr class="text-black"/>
+<br/>
+<Officers />
+<h2 class="text-4xl text-center font-tangerine font-bold">Directors</h2>
+<hr class="text-black"/>
+<br/>
+<Directors />
 </section>
