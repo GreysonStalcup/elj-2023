@@ -109,7 +109,10 @@ export const Officers: React.FC = () => {
       viewport={{ once: true }}
     >
       {officers.map((officer) => (
-        <div className="flex flex-col items-center justify-center w-3/4 p-5 md:w-1/6 mb-10 bg-slate-300 rounded-lg shadow-lg min-w-[300px]">
+        <div
+          key={officer.name}
+          className="flex flex-col items-center justify-center w-3/4 p-5 md:w-1/6 mb-10 bg-slate-300 rounded-lg shadow-lg min-w-[300px]"
+        >
           <img
             src={officer.image}
             alt={officer.name}
@@ -134,7 +137,10 @@ export const Directors: React.FC = () => {
       viewport={{ once: true }}
     >
       {directors.map((director) => (
-        <div className="flex flex-col items-center justify-center text-center pb-4">
+        <div
+          key={director.name}
+          className="flex flex-col items-center justify-center text-center pb-4"
+        >
           <h4 className="text-xl">{director.name}</h4>
         </div>
       ))}
