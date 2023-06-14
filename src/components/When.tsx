@@ -16,7 +16,11 @@ export default function When() {
           <img src={info} alt="info" />
         </div>
         <motion.div whileHover={{ scale: 1.1 }}>
-          <a href="#" target="_blank" className="hover:cursor-pointer">
+          <a
+            href="https://sdcbf.org/elj/elj-2023-register-here/?civiwp=CiviCRM&q=civicrm%2Fevent%2Fregister&id=22&reset=1"
+            target="_blank"
+            className="hover:cursor-pointer"
+          >
             <img src={button} alt="register button" />
           </a>
         </motion.div>
