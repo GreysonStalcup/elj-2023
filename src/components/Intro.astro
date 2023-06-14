@@ -26,6 +26,7 @@ import Sponsors from "./Sponsors";
 </section>
 <section
   class="justify-evenly intro bg-gradient-to-b from-[#184374] to-[#4b77a9] overflow-hidden relative">
+
   <Carousel client:only='react' />
 </section>
 <section
@@ -34,12 +35,14 @@ import Sponsors from "./Sponsors";
 </section>
 <section
   class="justify-evenly intro bg-gradient-to-b from-[#afcced] to-[#ffffff] overflow-hidden relative">
-
-<h2 class="text-4xl text-center font-tangerine font-bold">Officers</h2>
+  <h2 class="text-xl md:text-3xl font-oswald pb-10 text-center">
+    2023 Board of Directors
+  </h2>
+<h2 class="text-4xl md:text-5xl text-center font-tangerine font-bold">Officers</h2>
 <hr class="h-[1px] my-8 bg-gray-200 border-0 dark:bg-gray-700 w-3/4 mx-auto"/>
 <br/>
 <Officers client:visible />
-<h2 class="text-4xl text-center font-tangerine font-bold">Directors</h2>
+<h2 class="text-4xl md:text-5xl text-center font-tangerine font-bold">Directors</h2>
 <hr class="h-[1px] my-8 bg-gray-200 border-0 dark:bg-gray-700 w-3/4 mx-auto"/>
 <br/>
 <Directors client:visible />
