@@ -29,11 +29,13 @@ export default function Sponsors() {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
-      <img
-        src={isDesktop ? desktopImage : mobileImage}
-        alt="Sponsor Image"
-        className="mx-auto max-w-[2000px] w-full rounded-xl shadow-2xl"
-      />
+      <a href="https://sdcbf.org/elj/2023-our-sponsors/" target="_blank">
+        <img
+          src={isDesktop ? desktopImage : mobileImage}
+          alt="Sponsor Image"
+          className="mx-auto max-w-[2000px] w-full rounded-xl shadow-2xl"
+        />
+      </a>
     </motion.div>
   );
 }
