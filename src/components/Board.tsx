@@ -116,7 +116,7 @@ export const Officers: React.FC = () => {
           <img
             src={officer.image}
             alt={officer.name}
-            className="rounded-full w-32 h-32"
+            className="rounded-full w-32 h-32 object-cover"
           />
           <div className="text-center">
             <div className="text-xl font-bold">{officer.name}</div>
