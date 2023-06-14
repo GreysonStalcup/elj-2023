@@ -7,6 +7,7 @@ export default function When() {
     <motion.div
       initial={{ x: "-100%", opacity: 0 }}
       whileInView={{ x: "0", opacity: 1 }}
+      viewport={{ once: true }}
       transition={{ duration: 1 }}
       className="bg-white flex md:w-fit p-4 flex-col md:flex-row mx-auto gap-8 md:gap-0 w-10/12 items-center mt-24 shadow-2xl rounded-lg mb-24"
     >

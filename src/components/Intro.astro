@@ -5,6 +5,8 @@ import IntroText from "./IntroText";
 import When from "../components/When";
 import Shark from "./Shark";
 import { Officers, Directors } from "../components/Board";
+import Carousel from "./Carousel";
+import Sponsors from "./Sponsors";
 ---
 
 <section
@@ -19,14 +21,26 @@ import { Officers, Directors } from "../components/Board";
   <IntroText client:load />
 </section>
 <section
-  class="justify-evenly intro bg-gradient-to-b from-[#093C75] to-[#ffffff] overflow-hidden relative">
-<When client:visible />
+  class="justify-evenly intro bg-gradient-to-b from-[#093C75] to-[#184374] overflow-hidden relative">
+  <When client:visible />
+</section>
+<section
+  class="justify-evenly intro bg-gradient-to-b from-[#184374] to-[#4b77a9] overflow-hidden relative">
+  <Carousel client:visible />
+</section>
+<section
+  class="justify-evenly intro bg-gradient-to-b from-[#4b77a9] to-[#afcced] overflow-hidden relative">
+  <Sponsors client:load />
+</section>
+<section
+  class="justify-evenly intro bg-gradient-to-b from-[#afcced] to-[#ffffff] overflow-hidden relative">
+
 <h2 class="text-4xl text-center font-tangerine font-bold">Officers</h2>
-<hr class="text-black"/>
+<hr class="h-[1px] my-8 bg-gray-200 border-0 dark:bg-gray-700 w-3/4 mx-auto"/>
 <br/>
-<Officers />
+<Officers client:visible />
 <h2 class="text-4xl text-center font-tangerine font-bold">Directors</h2>
-<hr class="text-black"/>
+<hr class="h-[1px] my-8 bg-gray-200 border-0 dark:bg-gray-700 w-3/4 mx-auto"/>
 <br/>
-<Directors />
+<Directors client:visible />
 </section>

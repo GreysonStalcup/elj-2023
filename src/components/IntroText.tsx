@@ -24,13 +24,13 @@ export default function IntroText() {
         26th Annual An Evening in La Jolla
       </h1>
       <div className="tagline">
-        <h2 className="text-xl md:text-3xl uppercase">
+        <h2 className="text-xl md:text-3xl uppercase font-oswald pb-10">
           The best legal party in town!
         </h2>
         <p className="md:text-5xl font-tangerine text-2xl">
           A benefit that supports San Diego legal charities
         </p>
-        <div className="w-screen mx-auto md:float-right md:px-24">
+        <div className="w-screen mx-auto md:float-right md:px-24 mb-24 md:mb-0">
           <img
             src={invitationSponsor}
             className="mx-auto md:float-right"

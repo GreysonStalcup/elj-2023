@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 interface BoardMembers {
   name: string;
   position: string;
@@ -100,7 +101,13 @@ const directors: BoardMembers[] = [
 
 export const Officers: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center text-center gap-5 w-full flex-wrap">
+    <motion.div
+      className="flex flex-col md:flex-row justify-center items-center text-center gap-5 w-full flex-wrap"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
+    >
       {officers.map((officer) => (
         <div className="flex flex-col items-center justify-center w-3/4 p-5 md:w-1/6 mb-10 bg-slate-300 rounded-lg shadow-lg min-w-[300px]">
           <img
@@ -114,17 +121,23 @@ export const Officers: React.FC = () => {
           </div>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 export const Directors: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center text-center grid-">
+    <motion.div
+      className="grid grid-cols-1 md:grid-cols-3 items-center justify-center text-center grid-"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
+    >
       {directors.map((director) => (
         <div className="flex flex-col items-center justify-center text-center pb-4">
           <h4 className="text-xl">{director.name}</h4>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };
