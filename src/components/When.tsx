@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import info from "/when/info.png";
-import button from "/when/button.png";
+import button from "/when/button.webp";
 import collage from "/when/collage.png";
 export default function When() {
   return (
