@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import desktopImage from "/sponsors/Sponsors_desktop.webp";
-import mobileImage from "/sponsors/Sponsors_mobile.webp";
+import desktopImage from "/sponsors/SponsorsPage-V2.webp";
+import mobileImage from "/sponsors/SponsorsPageMBL_V2.webp";
 import { motion } from "framer-motion";
 export default function Sponsors() {
   const [isDesktop, setIsDesktop] = useState(false);
